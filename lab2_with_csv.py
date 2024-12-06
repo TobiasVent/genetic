@@ -98,6 +98,8 @@ def variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist,
             solution = create_random_solution(num_vars)
             result = evaluate(solution, clauses)
             eval_count += 1
+        else:
+            best_result = result
 
     endtime = time.time()
     return best_result, eval_count, endtime - starttime
