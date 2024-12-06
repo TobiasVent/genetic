@@ -144,7 +144,7 @@ with open("uf250-01.cnf", 'r') as file:
 
 
 all_results = []
-for i in range(1):
+for i in range(30):
     num_vars, num_clauses, clauses = process_cnf(uf20)
     max_dist = 1
     solution = create_random_solution(num_vars)
@@ -154,7 +154,7 @@ for i in range(1):
 write_results_to_csv("hill_climbing_results_uf20.csv", all_results)  
 
 all_results = []
-for i in range(1):
+for i in range(30):
     num_vars, num_clauses, clauses = process_cnf(uf100)
     max_dist = 1
     solution = create_random_solution(num_vars)
@@ -164,7 +164,7 @@ for i in range(1):
 write_results_to_csv("hill_climbing_results_uf100.csv", all_results) 
 
 all_results = []
-for i in range(1):
+for i in range(30):
     num_vars, num_clauses, clauses = process_cnf(uf250)
     max_dist = 1
     solution = create_random_solution(num_vars)
@@ -176,7 +176,7 @@ write_results_to_csv("hill_climbing_results_uf250.csv", all_results)
 
 
 all_results = []
-for i in range(1):
+for i in range(30):
     num_vars, num_clauses, clauses = process_cnf(uf20)
     max_dist = 1
     solution = create_random_solution(num_vars)
@@ -186,7 +186,7 @@ for i in range(1):
 write_results_to_csv("multistart_hill_climbing_results_uf20.csv", all_results) 
 
 all_results = []
-for i in range(1):
+for i in range(30):
     num_vars, num_clauses, clauses = process_cnf(uf100)
     max_dist = 1
     solution = create_random_solution(num_vars)
@@ -196,7 +196,7 @@ for i in range(1):
 write_results_to_csv("multistart_hill_climbing_results_uf100.csv", all_results) 
 
 all_results = []
-for i in range(1):
+for i in range(30):
     num_vars, num_clauses, clauses = process_cnf(uf250)
     max_dist = 1
     solution = create_random_solution(num_vars)
@@ -208,7 +208,7 @@ write_results_to_csv("multistart_hill_climbing_results_uf250.csv", all_results)
 
 
 all_results = []
-for i in range(1):
+for i in range(30):
     num_vars, num_clauses, clauses = process_cnf(uf20)
     max_dist = 3
     solution = create_random_solution(num_vars)
@@ -220,7 +220,7 @@ write_results_to_csv("variable_neighbourhood_ascent_uf20.csv", all_results)
 
 
 all_results = []
-for i in range(1):
+for i in range(30):
     num_vars, num_clauses, clauses = process_cnf(uf100)
     max_dist = 3
     solution = create_random_solution(num_vars)
@@ -231,7 +231,7 @@ write_results_to_csv("variable_neighbourhood_ascent_uf100.csv", all_results)
 
 
 all_results = []
-for i in range(1):
+for i in range(30):
     num_vars, num_clauses, clauses = process_cnf(uf250)
     max_dist = 3
     solution = create_random_solution(num_vars)
@@ -244,7 +244,7 @@ write_results_to_csv("variable_neighbourhood_ascent_uf250.csv", all_results)
 
 
 all_results = []
-for i in range(1):
+for i in range(30):
     num_vars, num_clauses, clauses = process_cnf(uf20)
     max_dist = 3
     solution = create_random_solution(num_vars)
@@ -255,7 +255,7 @@ write_results_to_csv("multistart_variable_neighbourhood_ascent_uf20.csv", all_re
 
 
 all_results = []
-for i in range(1):
+for i in range(30):
     num_vars, num_clauses, clauses = process_cnf(uf100)
     max_dist = 3
     solution = create_random_solution(num_vars)
@@ -266,7 +266,7 @@ write_results_to_csv("multistart_variable_neighbourhood_ascent_uf100.csv", all_r
 
 
 all_results = []
-for i in range(1):
+for i in range(30):
     num_vars, num_clauses, clauses = process_cnf(uf250)
     max_dist = 3
     solution = create_random_solution(num_vars)
