@@ -61,7 +61,7 @@ def process_cnf(cnf_content):
     return num_vars, num_clauses, clauses
 
 
-def variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, multistart=False, max_evals=10000):
+def variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, multistart=False, max_evals=10000000):
     flip_positions = create_flip_positions(num_vars, max_dist)
     improvement = True
     eval_count = 0
