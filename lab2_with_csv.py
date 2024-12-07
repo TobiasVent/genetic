@@ -207,51 +207,16 @@ with open("uf250-01.cnf", 'r') as file:
 
 
 
-all_results = []
-for i in range(30):
-    num_vars, num_clauses, clauses = process_cnf(uf20)
-    max_dist = 3
-    solution = create_random_solution(num_vars)
-    result = evaluate(solution, clauses)
-    eval_result, objective_count, runtime = variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, False)
-    all_results.append([eval_result, objective_count, runtime]) 
-write_results_to_csv("variable_neighbourhood_ascent_uf20.csv", all_results) 
-
-
-
-all_results = []
-for i in range(30):
-    num_vars, num_clauses, clauses = process_cnf(uf100)
-    max_dist = 3
-    solution = create_random_solution(num_vars)
-    result = evaluate(solution, clauses)
-    eval_result, objective_count, runtime = variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, False)
-    all_results.append([eval_result, objective_count, runtime]) 
-write_results_to_csv("variable_neighbourhood_ascent_uf100.csv", all_results) 
-
-
-all_results = []
-for i in range(30):
-    num_vars, num_clauses, clauses = process_cnf(uf250)
-    max_dist = 3
-    solution = create_random_solution(num_vars)
-    result = evaluate(solution, clauses)
-    eval_result, objective_count, runtime = variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, False)
-    all_results.append([eval_result, objective_count, runtime]) 
-write_results_to_csv("variable_neighbourhood_ascent_uf250.csv", all_results) 
-
-
-
-
 # all_results = []
 # for i in range(30):
 #     num_vars, num_clauses, clauses = process_cnf(uf20)
 #     max_dist = 3
 #     solution = create_random_solution(num_vars)
 #     result = evaluate(solution, clauses)
-#     eval_result, objective_count, runtime = variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, True)
+#     eval_result, objective_count, runtime = variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, False)
 #     all_results.append([eval_result, objective_count, runtime]) 
-# write_results_to_csv("multistart_variable_neighbourhood_ascent_uf20.csv", all_results) 
+# write_results_to_csv("variable_neighbourhood_ascent_uf20.csv", all_results) 
+
 
 
 # all_results = []
@@ -260,9 +225,9 @@ write_results_to_csv("variable_neighbourhood_ascent_uf250.csv", all_results)
 #     max_dist = 3
 #     solution = create_random_solution(num_vars)
 #     result = evaluate(solution, clauses)
-#     eval_result, objective_count, runtime = variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, True)
+#     eval_result, objective_count, runtime = variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, False)
 #     all_results.append([eval_result, objective_count, runtime]) 
-# write_results_to_csv("multistart_variable_neighbourhood_ascent_uf100.csv", all_results) 
+# write_results_to_csv("variable_neighbourhood_ascent_uf100.csv", all_results) 
 
 
 # all_results = []
@@ -271,6 +236,41 @@ write_results_to_csv("variable_neighbourhood_ascent_uf250.csv", all_results)
 #     max_dist = 3
 #     solution = create_random_solution(num_vars)
 #     result = evaluate(solution, clauses)
-#     eval_result, objective_count, runtime = variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, True)
+#     eval_result, objective_count, runtime = variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, False)
 #     all_results.append([eval_result, objective_count, runtime]) 
-# write_results_to_csv("multistart_variable_neighbourhood_ascent_uf250.csv", all_results) 
+# write_results_to_csv("variable_neighbourhood_ascent_uf250.csv", all_results) 
+
+
+
+
+all_results = []
+for i in range(30):
+    num_vars, num_clauses, clauses = process_cnf(uf20)
+    max_dist = 3
+    solution = create_random_solution(num_vars)
+    result = evaluate(solution, clauses)
+    eval_result, objective_count, runtime = variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, True)
+    all_results.append([eval_result, objective_count, runtime]) 
+write_results_to_csv("multistart_variable_neighbourhood_ascent_uf20.csv", all_results) 
+
+
+all_results = []
+for i in range(30):
+    num_vars, num_clauses, clauses = process_cnf(uf100)
+    max_dist = 3
+    solution = create_random_solution(num_vars)
+    result = evaluate(solution, clauses)
+    eval_result, objective_count, runtime = variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, True)
+    all_results.append([eval_result, objective_count, runtime]) 
+write_results_to_csv("multistart_variable_neighbourhood_ascent_uf100.csv", all_results) 
+
+
+all_results = []
+for i in range(30):
+    num_vars, num_clauses, clauses = process_cnf(uf250)
+    max_dist = 3
+    solution = create_random_solution(num_vars)
+    result = evaluate(solution, clauses)
+    eval_result, objective_count, runtime = variable_neighbourhood_ascent(num_vars, clauses, solution, result, max_dist, True)
+    all_results.append([eval_result, objective_count, runtime]) 
+write_results_to_csv("multistart_variable_neighbourhood_ascent_uf250.csv", all_results) 
